@@ -1,0 +1,140 @@
+/* Estilo general para el cuerpo */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #1c1c1c; /* Negro suave */
+  color: #f0f0f0; /* Texto blanco suave */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #2a2a2a; /* Negro más oscuro */
+  color: #ffffff; /* Blanco puro */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Contenedor principal */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #2a2a2a; /* Negro más oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Botones */
+button {
+  background-color: #4caf50; /* Verde moderno */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Pequeño zoom al pasar el ratón */
+}
+
+button:disabled {
+  background-color: #6b6b6b; /* Gris deshabilitado */
+  cursor: not-allowed;
+}
+
+/* Encabezados secundarios */
+h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Texto de estado */
+#simulation-status,
+#current-day {
+  font-size: 18px;
+  color: #ffcc00; /* Amarillo para destacar */
+  margin: 5px 0;
+}
+
+/* Listas */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+li {
+  background-color: #333333; /* Fondo gris oscuro */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+  color: #e0e0e0; /* Texto gris claro */
+}
+
+/* Contenedor del app */
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Ajustar el contenedor de la visualización */
+#visualization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 800px;
+  height: 600px;
+  background-color: #2a2a2a; /* Fondo gris oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Ajustar el SVG dentro del contenedor */
+#visualization svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilo de nodos */
+.node {
+  stroke: #ffffff;
+  stroke-width: 2px;
+  transition: fill 0.5s ease-in-out;
+}
+
+/* Estilo de enlaces */
+.link {
+  stroke: #777;
+  stroke-opacity: 0.6;
+}
+
+/* Etiquetas */
+.label {
+  pointer-events: none;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
