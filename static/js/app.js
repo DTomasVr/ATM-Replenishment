@@ -171,8 +171,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateCashiers(cashiers) {
         cashiersList.innerHTML = ""; // Limpiar la lista
         cashiers.forEach((cashier) => {
-            // Verificar si 'jid' es una cadena y extraer el número
-            const cashierId = (typeof cashier.jid === 'string' && cashier.jid.match(/\d+/)) ? cashier.jid.match(/\d+/)[0] : 'Desconocido';
+            // Verificar si 'jid' es un array y extraer el primer elemento
+            const jid = Array.isArray(cashier.jid) ? cashier.jid[0] : cashier.jid;
+    
+            // Verificar el valor de 'jid' antes de aplicar el regex
+            console.log("jid de cajero:", jid);
+    
+            // Usar regex para extraer números del jid (si existe)
+            let cashierId = (typeof jid === 'string' && jid.match(/\d+/)) 
+                ? jid.match(/\d+/)[0] 
+                : 'Desconocido';
             
             // Capitalizar la primera letra del estado
             const formattedState = cashier.estado.charAt(0).toUpperCase() + cashier.estado.slice(1).toLowerCase();
